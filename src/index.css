@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-gold: #C6A96C;
+  --color-anthracite: #1A1A1A;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-anthracite text-white;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply font-semibold relative tracking-wide text-current transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute left-1/2 -translate-x-1/2 bottom-[-4px] w-0 h-[2px] bg-gold transition-all duration-500 ease-in-out;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply w-1/2;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    @apply text-gold;
+  }
+
+  .nav-scrolled {
+    @apply bg-black/95 text-white border-b border-gold/10 backdrop-blur-md transition-all duration-300;
+  }
+
+  .nav-top {
+    @apply bg-white text-anthracite backdrop-blur-md transition-all duration-300;
+  }
+
+  .nav-separator {
+    @apply h-4 w-[1px] bg-current bg-opacity-20 mx-4;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-display mb-12 text-center;
+  }
+
+  .fade-in {
+    @apply transition-opacity duration-500 ease-in-out;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-300 ease-in-out hover:-translate-y-1;
+  }
+
+  .title-glow {
+    text-shadow: 0 0 30px rgba(196, 154, 145, 0.4),
+                 0 0 60px rgba(196, 154, 145, 0.2);
+  }
+  
+}

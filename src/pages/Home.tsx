@@ -54,7 +54,7 @@ const Home: React.FC<HomeProps> = ({ currentLang }) => {
     >
       {/* Titolo */}
       <h1 className="text-6xl md:text-8xl font-display mb-4 text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.8)]">
-        Rosanna Calisto
+        Rosanna
       </h1>
 
       {/* Sottotitolo */}

@@ -14,7 +14,7 @@ const content = {
   en: {
     role: 'Singer-Songwriter',
     latestRelease: 'Latest Release',
-    listen: 'Pre-save on Spotify',
+    listen: 'Listen on Spotify',
     releaseDate: 'Available November 29, 2024',
     songTitle: 'Living in the Blue',
     description:
@@ -23,7 +23,7 @@ const content = {
   it: {
     role: 'Cantautrice',
     latestRelease: 'Ultima Uscita',
-    listen: 'Pre-salva su Spotify',
+    listen: 'Ascolta su Spotify',
     releaseDate: 'Disponibile dal 29 Novembre 2024',
     songTitle: 'Living in the Blue',
     description:
@@ -96,7 +96,7 @@ const Home: React.FC<HomeProps> = ({ currentLang }) => {
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.5 }}
             className="relative rounded-lg overflow-hidden group cursor-pointer border-2 border-gold"
-            onClick={() => window.open('https://distrokid.com/hyperfollow/rosanna7/living-in-the-blue', '_blank')}
+            onClick={() => window.open('https://open.spotify.com/track/3wKfcBDA50DbEizTWkdn5z?si=bHenTwX5T6-5eSKZgDCrVg', '_blank')}
           >
             <img
               src={COPERTINA}
@@ -123,13 +123,26 @@ const Home: React.FC<HomeProps> = ({ currentLang }) => {
               {t.description}
             </p>*/}
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gold text-black py-3 px-6 rounded-full font-semibold text-lg shadow-md shadow-gold/50 hover:shadow-lg hover:shadow-gold/70"
-              onClick={() => window.open('https://distrokid.com/hyperfollow/rosanna7/living-in-the-blue', '_blank')}
-            >
-              {t.listen}
-            </motion.button>
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="bg-gold text-black py-3 px-6 rounded-full font-semibold text-lg shadow-md shadow-gold/50 hover:shadow-lg hover:shadow-gold/70 flex items-center gap-2" // Aggiunto flex e gap
+  onClick={() =>
+    window.open(
+      'https://open.spotify.com/track/3wKfcBDA50DbEizTWkdn5z?si=bHenTwX5T6-5eSKZgDCrVg',
+      '_blank'
+    )
+  }
+>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="black" // Riempimento nero pieno
+    className="w-5 h-5"
+  >
+    <path d="M5 3v18l15-9-15-9z" />
+  </svg>
+  {t.listen}
+</motion.button>
           </motion.div>
         </div>
       </motion.div>

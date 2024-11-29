@@ -15,7 +15,7 @@ const content = {
     role: 'Singer-Songwriter',
     latestRelease: 'Latest Release',
     listen: 'Listen on Spotify',
-    releaseDate: 'Available November 29, 2024',
+    releaseDate: 'Available now',
     songTitle: 'Living in the Blue',
     description:
       'Dive into an enchanting world of serene melodies and poetic storytelling. A timeless piece to soothe your soul.',
@@ -24,7 +24,7 @@ const content = {
     role: 'Cantautrice',
     latestRelease: 'Ultima Uscita',
     listen: 'Ascolta su Spotify',
-    releaseDate: 'Disponibile dal 29 Novembre 2024',
+    releaseDate: 'Disponibile adesso',
     songTitle: 'Living in the Blue',
     description:
       'Immergiti in un mondo incantevole di melodie serene e narrazioni poetiche. Un pezzo senza tempo per nutrire l’anima.',
